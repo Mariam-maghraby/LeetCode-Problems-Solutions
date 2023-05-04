@@ -4,6 +4,9 @@ public:
 
         int size = s.size();
 
+        // if(s.size() == 2){
+        //     size = 1;
+        // }
 
         if(s[s.size()-1] == ' '){
             size --;
