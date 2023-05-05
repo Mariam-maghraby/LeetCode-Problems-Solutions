@@ -4,7 +4,7 @@ public:
         vector<int>::iterator it;
 
         sort(nums.begin(), nums.end());
-        int removedCount = 0;
+
         for (int i=0; i<nums.size(); i++)
         {
             if (nums[i]==val){
