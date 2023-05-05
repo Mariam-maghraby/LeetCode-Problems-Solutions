@@ -3,7 +3,6 @@ public:
     int removeElement(vector<int>& nums, int val) {
         vector<int>::iterator it;
 
-        // sort(nums.begin(), nums.end());
 
         for (int i=0; i<nums.size(); i++)
         {
