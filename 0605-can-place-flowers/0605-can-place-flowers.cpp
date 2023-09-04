@@ -4,29 +4,8 @@ public:
        if(n == 0){
             return true;
         }
-        if(flowerbed.size() == 1){
-            if(flowerbed[0] == 0){
-                return true;
-            }
-            return false;
-        }
-
-        if(flowerbed[0] == flowerbed[1]){
-            flowerbed[0] = 1;
-            n--;
-            if(n == 0){
-            return true;
-        }
-        }
-
-        if(flowerbed[flowerbed.size()-1] == flowerbed[flowerbed.size()-2]){
-            flowerbed[flowerbed.size()-1] = 1;
-            n--;
-            if(n == 0){
-            return true;
-        }
-        }
-
+        flowerbed.insert(flowerbed.begin(), 0);
+        flowerbed.push_back(0);
         int i, j, k;
         i = 1;
 
@@ -36,7 +15,7 @@ public:
             if(n == 0){
                 break;
             }
-            if(flowerbed[j] == flowerbed[i] && flowerbed[i] == flowerbed[k]){
+            if(k < flowerbed.size() && flowerbed[j] == flowerbed[i] && flowerbed[i] == flowerbed[k]){
                 flowerbed[i] = 1;
                 n--;
             }
@@ -44,6 +23,4 @@ public:
         }
         return (n == 0);
     }
-        
-    
 };
