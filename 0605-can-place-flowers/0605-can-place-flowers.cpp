@@ -9,13 +9,13 @@ public:
         int i, j, k;
         i = 1;
 
-        while(i < flowerbed.size()){
+        while(i < flowerbed.size()-1){
             j = i-1;
             k = i+1;
             if(n == 0){
                 break;
             }
-            if(k < flowerbed.size() && flowerbed[j] == flowerbed[i] && flowerbed[i] == flowerbed[k]){
+            if(flowerbed[j] == flowerbed[i] && flowerbed[i] == flowerbed[k]){
                 flowerbed[i] = 1;
                 n--;
             }
