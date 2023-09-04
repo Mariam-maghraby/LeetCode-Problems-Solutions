@@ -14,7 +14,6 @@ public:
                 break;
             }
             if(flowerbed[i-1]+flowerbed[i]+flowerbed[i+1] == 0){
-                // flowerbed[i] = 1;
                 n--;
                 i++;
             }
