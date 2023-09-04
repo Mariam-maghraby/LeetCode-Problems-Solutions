@@ -6,15 +6,14 @@ public:
         }
         flowerbed.insert(flowerbed.begin(), 0);
         flowerbed.push_back(0);
-        int i,j, k;
-        i = 1;
+     
+        int i = 1;
         while(i < flowerbed.size()-1){
-            j = i-1;
-            k = i+1;
+            
             if(n == 0){
                 break;
             }
-            if(flowerbed[j]+flowerbed[i]+flowerbed[k] == 0){
+            if(flowerbed[i-1]+flowerbed[i]+flowerbed[i+1] == 0){
                 flowerbed[i] = 1;
                 n--;
             }
