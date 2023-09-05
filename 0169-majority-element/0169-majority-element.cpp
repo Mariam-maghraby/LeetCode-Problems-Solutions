@@ -1,7 +1,6 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        sort(nums.begin(), nums.end());
         map<int, int>numsMap;
 
         for(int i=0; i<nums.size(); i++){
