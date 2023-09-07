@@ -1,17 +1,18 @@
 class Solution {
 public:
     vector<int> findDisappearedNumbers(vector<int>& nums) {
-        vector<int> solution;
-        vector<int> numsSet(nums.size()+1);
+    vector<int> solution;
         for(int i=0; i<nums.size(); i++){
-            numsSet[nums[i]]++;
+            if(nums[abs(nums[i])-1] >0) {
+                nums[abs(nums[i]) - 1] = -nums[abs(nums[i]) - 1];
+            }
         }
-        for(int i=1; i<numsSet.size(); i++){
-            if(numsSet[i] == 0){
-                solution.push_back(i);
+        for(int i=0; i<nums.size(); i++){
+            if(nums[i]>0){
+                solution.push_back(i+1);
             }
         }
 
-       return solution; 
+        return solution;
     }
 };
