@@ -6,23 +6,20 @@ public:
         for(int i=0; i<nums.size(); i++){
             mp[nums[i]]++;
         }
-        // create a empty vector of pairs
-        vector<pair<int, int>> vec;
+        int n = nums.size();
+        vector<vector<int>> vec(n+1);
 
-        // copy key-value pairs from the map to the vector
-        map<int, int> :: iterator it2;
-        for (it2=mp.begin(); it2!=mp.end(); it2++)
+        for (auto it:mp)
         {
-            vec.push_back(make_pair(it2->first, it2->second));
+            vec[it.second].push_back(it.first);
         }
 
-        sort(vec.begin(), vec.end(), [](pair<int, int>& a,
-                       pair<int, int>& b) {
-            return a.second > b.second;});
-        while(k--){
-        solution.push_back(vec[k].first);
+        for(int i=n; i>0; i--){
+            if(solution.size() == k){
+                break;
+            }
+            solution.insert(solution.end(),vec[i].begin(), vec[i].end());
         }
-        return solution;
-        
+        return solution; 
     }
 };
