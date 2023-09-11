@@ -6,13 +6,23 @@ public:
         for(int i=0; i<nums.size(); i++){
             mp[nums[i]]++;
         }
+        // create a empty vector of pairs
+        vector<pair<int, int>> vec;
+
+        // copy key-value pairs from the map to the vector
+        map<int, int> :: iterator it2;
+        for (it2=mp.begin(); it2!=mp.end(); it2++)
+        {
+            vec.push_back(make_pair(it2->first, it2->second));
+        }
+
+        sort(vec.begin(), vec.end(), [](pair<int, int>& a,
+                       pair<int, int>& b) {
+            return a.second > b.second;});
         while(k--){
-            auto pr = std::max_element(mp.begin(), mp.end(), [](const auto &x, const auto &y) {
-                return x.second < y.second;
-            });
-            solution.push_back(pr->first);
-            pr->second = 0;
+        solution.push_back(vec[k].first);
         }
         return solution;
+        
     }
 };
