@@ -5,13 +5,6 @@ public:
             return 1;
         }
         sort(nums.begin(), nums.end());
-        
-        if(nums.size() == 2){
-            if(nums[1] == nums[0]+1){
-                return 2;
-            }
-            return 1;
-        }
         unique(nums.begin(), nums.end());
         int max = 0;
         int count = 0;
