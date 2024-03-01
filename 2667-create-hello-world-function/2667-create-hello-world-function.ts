@@ -1,9 +1,7 @@
 function createHelloWorld() {
     
-    return function(...args: any[]): string {
-        return "Hello World"
+    return (...args: any[]): string => "Hello World"
         
-    };
 };
 
 /**
