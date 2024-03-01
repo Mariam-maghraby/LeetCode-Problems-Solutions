@@ -1,17 +1,28 @@
-type Counter = {
-    increment: () => number,
-    decrement: () => number,
-    reset: () => number,
+class Counter {
+    init: number;
+    presentCount: number;
+    constructor(init: number){
+        this.init = init
+        this.presentCount = init;
+    }
+
+    increment() { 
+       this.presentCount ++;
+        return this.presentCount
+    }
+    decrement() {  
+        this.presentCount --;
+        return this.presentCount
+    }
+    reset() { 
+        this.presentCount = this.init;
+        return this.presentCount
+    }
+
 }
 
 function createCounter(init: number): Counter {
-    var newInit = init;
-    return {
-        increment: () => { return ++newInit},
-        decrement: () => { return --newInit },
-        reset: () => { return newInit = init},
-    }
-    
+    return new Counter(init) 
 };
 
 /**
