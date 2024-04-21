@@ -2,9 +2,9 @@ class Solution {
 public:
 
  map<string, string> mp;
+     string shortUrlPrefix = "http://tinyurl.com/";
     // Encodes a URL to a shortened URL.
     string encode(string longUrl) {
-        string shortUrlPrefix = "http://tinyurl.com/";
         string shortUrlPostfix = to_string(rand());
         string shortUrl = shortUrlPrefix + shortUrlPostfix;
         mp[shortUrl] = longUrl;
