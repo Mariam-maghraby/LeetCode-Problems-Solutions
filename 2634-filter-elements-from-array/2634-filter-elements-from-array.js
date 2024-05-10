@@ -4,11 +4,12 @@
  * @return {number[]}
  */
 var filter = function (arr, fn) {
-    const newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (Boolean(fn(arr[i], i)) === true)
-            newArr.push(arr[i])
+    let len = arr.length 
+    for (let i = len; i >= 0; i--) {
+        if (Boolean(fn(arr[i], i)) === false)
+            arr.splice(i, 1);
+            len --;
     }
-    return newArr;
+    return arr;
 
 };
