@@ -19,7 +19,7 @@ bool isPalindrome(string s, int l, int r) {
                 r--;
             }
             else{
-                return isPalindrome(s, ++l, r)|| isPalindrome(s, --l, --r);
+                return isPalindrome(s, l+1, r)|| isPalindrome(s, l, r-1);
 
             }
         }
