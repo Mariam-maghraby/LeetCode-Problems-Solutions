@@ -21,16 +21,9 @@ bool isPalindrome(string s) {
                 r--;
             }
             else{
-                string tmp = s;
-                tmp.erase(l, 1);
-                bool res = isPalindrome(tmp);
-               if(res){
-                return res;
-               }else{
-                string tmp = s;
-                tmp.erase(r, 1);
-                return isPalindrome(tmp);
-               }
+                string tmp1 = s;
+                string tmp2 = s;
+                return isPalindrome(tmp1.erase(l, 1))|| isPalindrome(tmp2.erase(r, 1));
 
             }
         }
