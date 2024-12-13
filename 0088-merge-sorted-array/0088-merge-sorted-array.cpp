@@ -5,14 +5,11 @@ public:
         int j = n-1;
         int xIndx = m+n-1;
         while(j>=0){
-            if (i>=0 && nums1[i] > nums2[j]) {
-                nums1[xIndx] = nums1[i];
-                i--;
+            if (i>=0 &&nums1[i] > nums2[j]) {
+                nums1[xIndx--] = nums1[i--];
             }else{
-                nums1[xIndx] = nums2[j];
-                j--;
+                nums1[xIndx--] = nums2[j--];
             }
-            xIndx--;
         }
     }
  };
