@@ -10,7 +10,7 @@ public:
             int sum=0;
             int m = (r+l)/2;
             for(int i=0; i<piles.size(); i++){
-                sum+=ceil(piles[i]/(double)m);
+                sum+=piles[i]/m + (piles[i]%m > 0);
             }
                 if(sum>h){
                     l=m+1;
