@@ -5,7 +5,7 @@ public:
             return *max_element(piles.begin(), piles.end());
         }
         int l=1;
-        long long r=1e9+1;
+        int r=*max_element(piles.begin(), piles.end());
         while(l<r){
             int sum=0;
             int m = (r+l)/2;
