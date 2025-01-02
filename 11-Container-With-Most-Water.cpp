@@ -7,9 +7,7 @@ public:
         while(l < r){
             int minHeight = min(height[l], height[r]);
             int currArea = minHeight * (r-l);
-            if(currArea > maxArea){
-                maxArea = currArea;
-            }
+            maxArea = max(currArea,maxArea);
             if(height[l] <= height[r]){
                 l++;
             }else{
