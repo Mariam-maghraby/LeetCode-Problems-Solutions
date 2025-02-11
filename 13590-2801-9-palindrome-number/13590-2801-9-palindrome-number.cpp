@@ -4,18 +4,15 @@ public:
         if(x<0){
             return false;
         }else{
-            long long rev=0;
+            long rev=0;
             int org = x;
-            while(x != 0){
+            while(x){
                 int n = x%10;
                 rev = rev*10 +n;
                 x /= 10;
             }
-            if(rev == org){
-                return true;
-            }else{
-                return false;
-            }
+            return rev == org;
+            
         }       
         
     }
