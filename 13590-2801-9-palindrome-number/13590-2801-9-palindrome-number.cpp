@@ -4,18 +4,19 @@ public:
         if(x<0){
             return false;
         }else{
-            string x_str = std::to_string(x);
-            int i=0;
-            int j=x_str.size()-1;
-            while(i<j){
-                if(x_str[i] != x_str[j]){
-                    return false;
-                }
-                i++;
-                j--;
+            long long rev=0;
+            int org = x;
+            while(x != 0){
+                int n = x%10;
+                rev = rev*10 +n;
+                x /= 10;
             }
-            return true;
-        }
+            if(rev == org){
+                return true;
+            }else{
+                return false;
+            }
+        }       
         
     }
 };
