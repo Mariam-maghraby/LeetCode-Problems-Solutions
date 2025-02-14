@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minimumMoves(string s) {
-        long moves = 0;
+        int moves = 0;
         int i=0;
             while(i<s.size()){
                 if(s[i] == 'X'){
