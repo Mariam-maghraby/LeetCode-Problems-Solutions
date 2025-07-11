@@ -2,7 +2,7 @@ class Solution {
 public:
     int binary_search(int l, int r, int target, vector<int>& nums)  {
         if (l > r) return -1;
-        int m = (l + r) / 2; // long long or (l-r)/2 + r
+        int m = (l-r)/2 + r;
         if (target == nums[m]) {
             return m;
         } else {
