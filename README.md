@@ -15,4 +15,12 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 |  |
 | ------- |
 | [2495-number-of-unique-subjects-taught-by-each-teacher](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/2495-number-of-unique-subjects-taught-by-each-teacher) |
+## Array
+|  |
+| ------- |
+| [0792-binary-search](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0792-binary-search) |
+## Binary Search
+|  |
+| ------- |
+| [0792-binary-search](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0792-binary-search) |
 <!---LeetCode Topics End-->
