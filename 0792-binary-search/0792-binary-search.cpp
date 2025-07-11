@@ -17,12 +17,10 @@ public:
     int search(vector<int>& nums, int target) {
         int l = 0;
         int r = nums.size() - 1;
-        int res = -1;
         while (l <= r) {
-            int m = (l-r)/2 + r; // long long or (l-r)/2 + r
+            int m = (l-r)/2 + r; 
             if (target == nums[m]) {
-                res = m;
-                break;
+                return m;
             } else {
                 if (target < nums[m]) {
                     r = m-1;
@@ -31,6 +29,6 @@ public:
                 }
             }
         }
-        return res;
+        return -1;
     }
 };
