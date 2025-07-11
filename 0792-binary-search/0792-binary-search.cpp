@@ -19,7 +19,7 @@ public:
         int r = nums.size() - 1;
         int res = -1;
         while (l <= r) {
-            int m = (l + r) / 2; // long long or (l-r)/2 + r
+            int m = (l-r)/2 + r; // long long or (l-r)/2 + r
             if (target == nums[m]) {
                 res = m;
                 break;
