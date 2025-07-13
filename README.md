@@ -18,9 +18,14 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0001-two-sum) |
 | [0792-binary-search](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0792-binary-search) |
 ## Binary Search
 |  |
 | ------- |
 | [0792-binary-search](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0792-binary-search) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0001-two-sum) |
 <!---LeetCode Topics End-->
