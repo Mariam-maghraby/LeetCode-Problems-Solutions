@@ -19,6 +19,7 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0001-two-sum) |
+| [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
 | [0792-binary-search](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0792-binary-search) |
 ## Binary Search
 |  |
@@ -28,4 +29,13 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0001-two-sum) |
+| [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
+## String
+|  |
+| ------- |
+| [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
+## Sorting
+|  |
+| ------- |
+| [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
 <!---LeetCode Topics End-->
