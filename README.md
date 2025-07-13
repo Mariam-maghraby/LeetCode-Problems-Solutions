@@ -34,8 +34,13 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
+| [0125-valid-palindrome](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0125-valid-palindrome) |
 ## Sorting
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
+## Two Pointers
+|  |
+| ------- |
+| [0125-valid-palindrome](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0125-valid-palindrome) |
 <!---LeetCode Topics End-->
