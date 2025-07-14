@@ -1,20 +1,15 @@
 class Solution {
 public:
     bool isValid(string s) {
-        map<char,char> mp = {make_pair('(', ')'), make_pair('{','}'), make_pair('[',']') };
-        stack<char> sk;
+        map<char, char> mp = {{'(', ')'}, {'{', '}'}, {'[', ']'}};
+        stack<char> st;
         for(int i=0; i<s.size(); i++){
-            sk.push(s[i]);
-            if(sk.size()>1){
-                char x = sk.top();
-                sk.pop();
-                if(mp[sk.top()] == x){
-                    sk.pop();
-                }else{
-                    sk.push(x);
-                }
+            if(!st.empty() && s[i] == mp[st.top()]){
+                st.pop();
+            }else{
+                st.push(s[i]);
             }
         }
-        return sk.size() > 0 ? false:true;
+        return st.empty();
     }
 };
