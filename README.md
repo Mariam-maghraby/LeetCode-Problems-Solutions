@@ -33,6 +33,7 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 ## String
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0020-valid-parentheses) |
 | [0049-group-anagrams](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0049-group-anagrams) |
 | [0125-valid-palindrome](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0125-valid-palindrome) |
 | [0680-valid-palindrome-ii](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0680-valid-palindrome-ii) |
@@ -49,4 +50,8 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 |  |
 | ------- |
 | [0680-valid-palindrome-ii](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0680-valid-palindrome-ii) |
+## Stack
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
