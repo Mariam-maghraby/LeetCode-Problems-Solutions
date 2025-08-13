@@ -14,6 +14,7 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 ## Database
 |  |
 | ------- |
+| [0596-classes-with-at-least-5-students](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0596-classes-with-at-least-5-students) |
 | [1155-product-sales-analysis-iii](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/1155-product-sales-analysis-iii) |
 | [1245-user-activity-for-the-past-30-days-i](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/1245-user-activity-for-the-past-30-days-i) |
 | [2495-number-of-unique-subjects-taught-by-each-teacher](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/2495-number-of-unique-subjects-taught-by-each-teacher) |
