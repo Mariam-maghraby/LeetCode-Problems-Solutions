@@ -4,30 +4,25 @@ public:
     }
 
     stack<int> stk;
-    vector<int> vec;
+    stack<int> minStk;
 
     void push(int val) {
+        if(stk.empty()){
+            minStk.push(val);
+        }else{
+            if(minStk.top()<val){
+                minStk.push(minStk.top());
+            }else{
+               minStk.push(val); //if minStk.top()>val 
+            }
+        }
         stk.push(val);
-        vec.push_back(val);
-        sort(vec.begin(), vec.end());
+        
     }
     
     void pop() {
-        if(vec[0] == stk.top()){
-            stk.pop();
-            vec.erase(vec.begin());
-        }  
-        else{
-            // 1. Find the first occurrence
-            auto it = std::find(vec.begin(), vec.end(), stk.top());
-            // 2. Erase it if it was found
-            if (it != vec.end()) {
-                vec.erase(it);
-            }
-            stk.pop();
-
-        }
-        
+        stk.pop();
+        minStk.pop();
     }
     
     int top() {
@@ -35,7 +30,7 @@ public:
     }
     
     int getMin() {
-        return *vec.begin();   
+        return minStk.top();   
     }
 };
 
