@@ -18,9 +18,12 @@ public:
             vec.erase(vec.begin());
         }  
         else{
-           vec.erase(std::remove_if(vec.begin(), vec.end(), [&](int n){ 
-    return n == stk.top(); 
-}), vec.end());
+            // 1. Find the first occurrence
+            auto it = std::find(vec.begin(), vec.end(), stk.top());
+            // 2. Erase it if it was found
+            if (it != vec.end()) {
+                vec.erase(it);
+            }
             stk.pop();
 
         }
