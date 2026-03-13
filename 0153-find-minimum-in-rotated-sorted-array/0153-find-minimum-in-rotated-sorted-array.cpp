@@ -8,7 +8,7 @@ public:
             if(nums[l]<nums[r]){
                 return nums[l];
             }else{
-               mid=((l+r)/2);
+               mid=(l+r)/2;
                if(nums[mid]>nums[r]){
                     l=mid+1;
                 }else{
