@@ -4,8 +4,8 @@ public:
         int l = 0;
         int r = nums.size()-1;
         int mid;
-        while(l<=r){
-            if(nums[l]<=nums[r]){
+        while(l<r){
+            if(nums[l]<nums[r]){
                 return nums[l];
             }else{
                mid=((l+r)/2);
