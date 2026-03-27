@@ -1,11 +1,12 @@
 class Solution {
 public:
     bool isPerfectSquare(int num) {
-        map<long, int>mp;
+    vector<long>mp;
         for(int i=0; i<46341; i++){
-            mp[i*i] = i;
+            mp.push_back(i*i);
         }
-        if(mp[num]) return true;
+        auto it = find(mp.begin(), mp.end(), num);
+        if(it != mp.end()) return true;
         return false;
     }
 };
