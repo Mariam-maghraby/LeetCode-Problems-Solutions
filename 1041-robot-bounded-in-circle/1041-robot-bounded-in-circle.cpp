@@ -23,21 +23,22 @@ public:
                 case 'L':
                     indx= (indx + dirs.size() - 1) % dirs.size();
                     dir_1= dirs[indx];
-                    
                     break;
                 case 'G':
-                    if(dir_1=='E'){
-                        x_1++;
-                    }else{
-                        if(dir_1=='W'){
+                    switch(dir_1){
+                        case 'E':
+                            x_1++;
+                            break;
+                        case 'W':
                             x_1--;
-                        }else{
-                            if(dir_1=='S'){
-                                y_1--;
-                            }else{
-                                y_1++;
-                            }
-                        }
+                            break;
+                        case 'S':
+                            y_1--;
+                            break;
+                        case 'N':
+                            y_1++;
+                            break;
+                            
                     }
                     break;
                 default:
