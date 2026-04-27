@@ -3,36 +3,36 @@ public:
     bool isRobotBounded(string instructions) {
         vector<char> dirs = {'N','E', 'S', 'W'};
 
-        int x_1 = 0;
-        int y_1 = 0;
-        char dir_1 = 'N';
+        int x = 0;
+        int y = 0;
+        char dir = 'N';
         bool res= false;
 
         for(int i=0; i<instructions.size(); i++){
-            auto it = find(dirs.begin(), dirs.end(), dir_1);
+            auto it = find(dirs.begin(), dirs.end(), dir);
             int indx = it - dirs.begin();
             switch(instructions[i]){
                 case 'R':
                     indx = (indx+1) % dirs.size();
-                    dir_1=dirs[indx];
+                    dir=dirs[indx];
                     break;
                 case 'L':
                     indx= (indx + dirs.size() - 1) % dirs.size();
-                    dir_1= dirs[indx];
+                    dir= dirs[indx];
                     break;
                 case 'G':
-                    switch(dir_1){
+                    switch(dir){
                         case 'E':
-                            x_1++;
+                            x++;
                             break;
                         case 'W':
-                            x_1--;
+                            x--;
                             break;
                         case 'S':
-                            y_1--;
+                            y--;
                             break;
                         case 'N':
-                            y_1++;
+                            y++;
                             break;
                             
                     }
@@ -42,7 +42,7 @@ public:
                 
             }
         }
-        if((x_1==0 && y_1==0)|| dir_1!='N'){
+        if((x==0 && y==0)|| dir!='N'){
             res= true;
             return res;
         };
