@@ -15,22 +15,24 @@ public:
         for(int i=0; i<instructions.size(); i++){
             auto it = find(dirs.begin(), dirs.end(), dir_1);
             int indx = it - dirs.begin();
-            if(instructions[i] == 'R'){
-                if(indx == 3){
-                    indx = 0;
-                }else{
-                    indx= indx+1;
-                }
-                dir_1=dirs[indx];
-            }else{
-                if(instructions[i] == 'L'){
-                    if(indx ==0){
+            switch(instructions[i]){
+                case 'R':
+                    if(indx == 3){
+                        indx = 0;
+                    }else{
+                        indx= indx+1;
+                    }
+                    dir_1=dirs[indx];
+                    break;
+                case 'L':
+                    if(indx == 0){
                         dir_1= dirs[dirs.size()-1];
                     }else{
                         indx= indx-1;
                         dir_1= dirs[indx];
                     }
-                }else{
+                    break;
+                case 'G':
                     if(dir_1=='E'){
                         x_1++;
                     }else{
@@ -44,7 +46,10 @@ public:
                             }
                         }
                     }
-                }
+                    break;
+                default:
+                    break;
+                
             }
         }
         if((x_1==0 && y_1==0)|| dir_1!='N'){
