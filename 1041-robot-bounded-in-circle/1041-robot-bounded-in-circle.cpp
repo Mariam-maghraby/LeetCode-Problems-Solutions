@@ -17,16 +17,13 @@ public:
             int indx = it - dirs.begin();
             switch(instructions[i]){
                 case 'R':
-                    indx = (indx+1)%4;
+                    indx = (indx+1) % dirs.size();
                     dir_1=dirs[indx];
                     break;
                 case 'L':
-                    if(indx == 0){
-                        dir_1= dirs[dirs.size()-1];
-                    }else{
-                        indx= indx-1;
-                        dir_1= dirs[indx];
-                    }
+                    indx= (indx + dirs.size() - 1) % dirs.size();
+                    dir_1= dirs[indx];
+                    
                     break;
                 case 'G':
                     if(dir_1=='E'){
