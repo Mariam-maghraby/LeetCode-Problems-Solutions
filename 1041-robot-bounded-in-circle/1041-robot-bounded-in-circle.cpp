@@ -6,6 +6,12 @@ public:
         int y = 0;
         char dir = 'N';
         pair<int, int> pos ={x, y};
+        int dx[255]={0};
+        int dy[255]={0};
+        dx['E']=1;
+        dx['W']=-1;
+        dy['N']=1;
+        dy['S']=-1;
         bool res= false;
 
         for(int i=0; i<instructions.size(); i++){
@@ -21,21 +27,8 @@ public:
                     dir= dirs[indx];
                     break;
                 case 'G':
-                    switch(dir){
-                        case 'E':
-                            pos.first++;
-                            break;
-                        case 'W':
-                            pos.first--;
-                            break;
-                        case 'S':
-                            pos.second--;
-                            break;
-                        case 'N':
-                            pos.second++;
-                            break;
-                            
-                    }
+                    pos.first += dx[dir];
+                    pos.second += dy[dir];
                     break;
                 default:
                     break;
