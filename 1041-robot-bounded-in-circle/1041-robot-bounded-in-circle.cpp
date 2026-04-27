@@ -17,11 +17,7 @@ public:
             int indx = it - dirs.begin();
             switch(instructions[i]){
                 case 'R':
-                    if(indx == 3){
-                        indx = 0;
-                    }else{
-                        indx= indx+1;
-                    }
+                    indx = (indx+1)%4;
                     dir_1=dirs[indx];
                     break;
                 case 'L':
