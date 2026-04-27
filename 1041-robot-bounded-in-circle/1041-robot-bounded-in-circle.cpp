@@ -2,10 +2,10 @@ class Solution {
 public:
     bool isRobotBounded(string instructions) {
         vector<char> dirs = {'N','E', 'S', 'W'};
-
         int x = 0;
         int y = 0;
         char dir = 'N';
+        pair<int, int> pos ={x, y};
         bool res= false;
 
         for(int i=0; i<instructions.size(); i++){
@@ -23,16 +23,16 @@ public:
                 case 'G':
                     switch(dir){
                         case 'E':
-                            x++;
+                            pos.first++;
                             break;
                         case 'W':
-                            x--;
+                            pos.first--;
                             break;
                         case 'S':
-                            y--;
+                            pos.second--;
                             break;
                         case 'N':
-                            y++;
+                            pos.second++;
                             break;
                             
                     }
@@ -42,7 +42,7 @@ public:
                 
             }
         }
-        if((x==0 && y==0)|| dir!='N'){
+        if(pos == pair<int, int>{0, 0}|| dir!='N'){
             res= true;
             return res;
         };
