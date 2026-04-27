@@ -6,8 +6,8 @@ public:
         int y = 0;
         char dir = 'N';
         pair<int, int> pos ={x, y};
-        int dx[255]={0};
-        int dy[255]={0};
+        static int dx[255]={0};
+        static int dy[255]={0};
         dx['E']=1;
         dx['W']=-1;
         dy['N']=1;
