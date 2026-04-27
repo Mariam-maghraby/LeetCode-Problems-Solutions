@@ -3,13 +3,9 @@ public:
     bool isRobotBounded(string instructions) {
         vector<char> dirs = {'N','E', 'S', 'W'};
 
-        int x_0 = 0;
-        int y_0 = 0;
-        char dir_0 = 'N';
-
-        int x_1 = x_0;
-        int y_1 = y_0;
-        char dir_1 = dir_0;
+        int x_1 = 0;
+        int y_1 = 0;
+        char dir_1 = 'N';
         bool res= false;
 
         for(int i=0; i<instructions.size(); i++){
