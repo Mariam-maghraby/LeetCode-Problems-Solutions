@@ -12,14 +12,15 @@ public:
         if (mp.find(key) == mp.end()) {
             return "";
         }
-        
+        vector<pair<int,string>>& inner_map = mp.at(key);
+     
         int l = 0;
         int r = mp[key].size()-1;
         string res;
         while(l<=r){
             int mid =(l+r)/2;
-            if(mp[key][mid].first <= timestamp){
-                res = mp[key][mid].second;
+            if(inner_map[mid].first <= timestamp){
+                res = inner_map[mid].second;
                 l= mid+1;
             }else{
                 
