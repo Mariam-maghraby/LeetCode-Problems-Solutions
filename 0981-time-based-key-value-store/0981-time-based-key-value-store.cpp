@@ -16,19 +16,22 @@ public:
      
         int l = 0;
         int r = mp[key].size()-1;
-        string res;
+        string res="";
         while(l<=r){
             int mid =(l+r)/2;
-            if(inner_map[mid].first <= timestamp){
-                res = inner_map[mid].second;
-                l= mid+1;
-            }else{
+            if(inner_map[mid].first == timestamp){
+                return inner_map[mid].second;
                 
-                r  = mid-1;
+            }else{
+                if(inner_map[mid].first < timestamp){
+                    l= mid+1;
+                }else{
+                    r  = mid-1;
+                }
             }
         }
         
-        return res;
+        return r>=0 ? inner_map[r].second : res;
     }
 };
 
