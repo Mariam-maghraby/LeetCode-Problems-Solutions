@@ -29,6 +29,7 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 ## Binary Search
 |  |
 | ------- |
+| [0441-arranging-coins](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0441-arranging-coins) |
 | [0792-binary-search](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0792-binary-search) |
 ## Hash Table
 |  |
@@ -59,4 +60,8 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0020-valid-parentheses) |
+## Math
+|  |
+| ------- |
+| [0441-arranging-coins](https://github.com/Mariam-maghraby/LeetCode-Problems-Solutions/tree/master/0441-arranging-coins) |
 <!---LeetCode Topics End-->
