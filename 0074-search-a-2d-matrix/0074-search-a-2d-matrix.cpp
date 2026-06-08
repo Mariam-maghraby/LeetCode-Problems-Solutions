@@ -6,10 +6,11 @@ public:
         int cols =matrix.size(); //m
         int i=0;
         int  mid;
+        while(i < cols - 1 && target> matrix[i][r]){
+            i++;
+        }
         while(l<=r && i<cols && target<= matrix[cols-1][r]){
-            while(r>=0 && i>=0 && target> matrix[i][r]){
-                i++;
-            }
+           
             mid = (l+r)/2;
 
             if(matrix[i][mid] == target){
