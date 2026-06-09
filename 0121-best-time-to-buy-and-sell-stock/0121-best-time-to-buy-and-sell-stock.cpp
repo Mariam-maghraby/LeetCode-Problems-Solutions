@@ -7,17 +7,17 @@ public:
         int maxPrice =  0;
         int maxProfit =0;
         int buyIndx=i;
-        int sellIndx=j;
+        // int sellIndx=j;
         while(j<prices.size()){
             if(minPrice> prices[j] && j<prices.size()-1){
                 minPrice = prices[j];
                 buyIndx=j;
             }
 
-            if(maxPrice< prices[j]){
-                maxPrice = prices[j];
-                sellIndx=j;
-            }
+            // if(maxPrice< prices[j]){
+            //     maxPrice = prices[j];
+            //     sellIndx=j;
+            // }
             if(buyIndx < j){
                 maxProfit = max(maxProfit, prices[j]-minPrice);
             }
