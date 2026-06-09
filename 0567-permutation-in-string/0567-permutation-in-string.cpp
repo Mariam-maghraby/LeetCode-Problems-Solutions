@@ -1,27 +1,29 @@
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
-        int i=0;
-        int j=i+s1.size()-1;
         int k=0;
-        sort(s1.begin(), s1.end());
-        
-        while(j<s2.size()){
-            bool flag=s1.find(s2[i]) != std::string::npos;
-            if (flag) {
-                string temp;
-                for(int q=i; q<j+1; q++){
-                    temp.push_back(s2[q]);
+        // sort(s1.begin(), s1.end());
+        while(k<s2.size()){
+            if (s1.find(s2[k]) != std::string::npos) {
+                string s1Copy = s1;
+                if (k+s1.size()<=s2.size()) {
+                    string temp1 = s2.substr(k,s1.size());
+                    sort(temp1.begin(),temp1.end());
+                    sort(s1Copy.begin(),s1Copy.end());
+                    if(temp1== s1Copy){
+                        return true;
+                    }
                 }
-                sort(temp.begin(),temp.end());
-
-                if(temp== s1){
-                    return true;
+                if (k - static_cast<int>(s1.size()) + 1 >= 0 ) {
+                    string temp2 = s2.substr(k-s1.size()+1, s1.size());
+                    sort(temp2.begin(),temp2.end());
+                    sort(s1Copy.begin(),s1Copy.end());
+                    if(temp2== s1Copy){
+                        return true;
+                    }
                 }
             }
-            i++;
-            j=i+s1.size()-1;
-
+            k++;
         }
         return false;
     }
