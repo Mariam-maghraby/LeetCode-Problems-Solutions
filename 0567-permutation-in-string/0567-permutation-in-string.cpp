@@ -1,27 +1,20 @@
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
+        map<char, int>mp1;
+        map<char, int>mp2;
+        for(int i=0; i<s1.size();i++){
+            mp1[s1[i]]+=1;
+        }
         int k=0;
-        // sort(s1.begin(), s1.end());
         while(k<s2.size()){
-            if (s1.find(s2[k]) != std::string::npos) {
-                string s1Copy = s1;
-                if (k+s1.size()<=s2.size()) {
-                    string temp1 = s2.substr(k,s1.size());
-                    sort(temp1.begin(),temp1.end());
-                    sort(s1Copy.begin(),s1Copy.end());
-                    if(temp1== s1Copy){
-                        return true;
-                    }
-                }
-                if (k - static_cast<int>(s1.size()) + 1 >= 0 ) {
-                    string temp2 = s2.substr(k-s1.size()+1, s1.size());
-                    sort(temp2.begin(),temp2.end());
-                    sort(s1Copy.begin(),s1Copy.end());
-                    if(temp2== s1Copy){
-                        return true;
-                    }
-                }
+            for(int j=0; j<s1.size() && k+j <s2.size();j++){
+                mp2[s2[k+j]]++;
+            }
+            if(mp1 == mp2){
+                return true;
+            }else{
+                mp2.clear();
             }
             k++;
         }
