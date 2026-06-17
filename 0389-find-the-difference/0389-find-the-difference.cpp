@@ -7,7 +7,7 @@ public:
         int  i=0;
         int  j=0;
 
-        while(j<t.size()){
+        while(i<s.size()){
             if(s[i]== t[j]){
                 i++;
                 j++;
@@ -16,7 +16,7 @@ public:
             }
 
         }
-        return t[j];
+        return t[i];
     }
 
 };
